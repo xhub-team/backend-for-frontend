@@ -1,6 +1,6 @@
 import * as yaml from 'yaml';
 import * as fs from 'fs';
-import { AppConfig } from './interface';
+import { AppConfig, DatabaseConfig } from './interface';
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
@@ -21,5 +21,9 @@ export class ConfigService {
   // Метод для получения порта
   getPort(): number {
     return this.config.server.port;
+  }
+
+  getDatabaseConfig(): DatabaseConfig {
+    return this.config.database;
   }
 }
