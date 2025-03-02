@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './application/controller';
-import { AppService } from './application/service';
+import { AppController } from './application/service/controller';
+import { AppService } from './application/service/handler';
 import { ConfigService } from './configuration/service';
 import { UserTableService } from './infrastructure/service/user';
 import { DatabaseModule } from './infrastructure/module';
