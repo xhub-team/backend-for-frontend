@@ -1,6 +1,6 @@
 import * as yaml from 'yaml';
 import * as fs from 'fs';
-import { AppConfig, DatabaseConfig } from './interface';
+import { AppConfig } from './interface';
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
@@ -23,7 +23,4 @@ export class ConfigService {
     return this.config.server.port;
   }
 
-  getDatabaseConfig(): DatabaseConfig {
-    return this.config.database;
-  }
 }
